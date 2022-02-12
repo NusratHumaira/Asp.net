@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Productnames>
+	<Products>
+		<ProductId>1</ProductId>
+		<ProductName>Laptops</ProductName>
+		</Products>
+	<Products>
+		<ProductId>2</ProductId>
+		<ProductName>Desktops</ProductName>
+	</Products>
+	<Products>
+		<ProductId>3</ProductId>
+		<ProductName>Servers</ProductName>
+	</Products>
+	</Productnames>
