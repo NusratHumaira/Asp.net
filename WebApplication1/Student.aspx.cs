@@ -158,7 +158,16 @@ namespace WebApplication1
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-
+            if (sqlCon.State == ConnectionState.Closed)
+                sqlCon.Open();
+            SqlCommand sqlCmd = new SqlCommand("StudentDeleteByID", sqlCon);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.AddWithValue("@ID", Convert.ToInt32(hfStudentID.Value));
+            sqlCmd.ExecuteNonQuery();
+            sqlCon.Close();
+            Clear();
+            FillGridView();
+            lblSuccessMessage.Text = "Deleted Successfully";
         }
     }
 }
