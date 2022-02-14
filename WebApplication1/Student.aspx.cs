@@ -11,7 +11,7 @@ namespace WebApplication1
 {
     public partial class Student : System.Web.UI.Page
     {
-        SqlConnection sqlCon = new SqlConnection("Data Source=NUSRAT\\SQL2012; database=StudentData;User ID=sa;Password=sa1234");
+        SqlConnection sqlCon = new SqlConnection("Data Source=NUSRAT\\SQL2012; database=AspDotnetVenkatDB;User ID=sa;Password=sa1234");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -33,7 +33,7 @@ namespace WebApplication1
             hfStudentID.Value = "";
             TxtStudentID.Text = TxtName.Text = TxtFName.Text = TxtMName.Text = TxtDepartment.Text = "";
             TxtSubject.Text = TxtTotalSemester.Text = TxtMobileNo.Text = TxtEmail.Text = TxtDOB.Text = "";
-            TxtAddress.Text = TxtBloodGrp.Text =  "";
+            TxtAddress.Text = TxtBloodGrp.Text = "";
             lblSuccessMessage.Text = lblErrorMessage.Text = "";
             btnSave.Text = "Save";
             btnDelete.Enabled = false;
@@ -44,17 +44,18 @@ namespace WebApplication1
             string gender = string.Empty;
             if (mRadioButton.Checked)
             {
-                gender = "M";
+                gender = "male";
             }
             else if (fRadioButton.Checked)
             {
-                gender = "F";
+                gender = "female";
             }
             else
             {
-                gender = "U";
+                gender = "others";
             }
-            string relocate = string.Empty;
+            /*string relocate = string.Empty;
+            
             if (CheckBox1.Checked)
             {
                 relocate = "C#";
@@ -83,6 +84,7 @@ namespace WebApplication1
             {
                 relocate = "SqlServer";
             }
+            */
 
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
@@ -92,7 +94,7 @@ namespace WebApplication1
             sqlCmd.Parameters.AddWithValue("@StudentID", TxtStudentID.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Name", TxtName.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@FName", TxtFName.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@MName", TxtMName.Text.Trim());          
+            sqlCmd.Parameters.AddWithValue("@MName", TxtMName.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Department", TxtDepartment.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Subject", TxtSubject.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@TotalSemester", TxtTotalSemester.Text.Trim());
@@ -101,10 +103,27 @@ namespace WebApplication1
             sqlCmd.Parameters.AddWithValue("@DOB", TxtDOB.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Address", TxtAddress.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@BloodGrp", TxtBloodGrp.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@Gender",gender);
-            sqlCmd.Parameters.AddWithValue("@Course", relocate);
-            //sqlCmd.Parameters.AddWithValue("@Photo", TxtPhoto.Text.Trim());
+            //sqlCmd.Parameters.AddWithValue("@Gender", RadioButtonList1.SelectedItem.Text.Trim());
+            sqlCmd.Parameters.AddWithValue("@Gender", gender);
 
+            //sqlCmd.Parameters.AddWithValue("@Photo", TxtPhoto.Text.Trim());
+            string relocate = string.Empty;
+            for (int i = 0; i < CheckBoxList1.Items.Count; i++)
+            {
+                if (CheckBoxList1.Items[i].Selected)
+                {
+                    if (relocate == "")
+                    {
+                        relocate = CheckBoxList1.Items[i].Text;
+                    }
+                    else
+                    {
+                        relocate += "," + CheckBoxList1.Items[i].Text;
+                    }
+                }
+
+            }
+            sqlCmd.Parameters.AddWithValue("@Course", relocate);
             sqlCmd.ExecuteNonQuery();
             sqlCon.Close();
             string StudentID = hfStudentID.Value;
@@ -151,10 +170,46 @@ namespace WebApplication1
             TxtDOB.Text = dtbl.Rows[0]["DOB"].ToString();
             TxtAddress.Text = dtbl.Rows[0]["Address"].ToString();
             TxtBloodGrp.Text = dtbl.Rows[0]["BloodGrp"].ToString();
-            
+
+            RadioButtonUpdate(dtbl);
+            CheckboxUpdate(dtbl);
             btnSave.Text = "Update";
             btnDelete.Enabled = true;
 
+        }
+        protected void RadioButtonUpdate(DataTable dtbl)
+        {
+            if (dtbl.Rows[0]["Gender"].ToString() == "male")
+            {
+                //CheckBox1.Checked= true;
+                mRadioButton.Checked = true;
+
+            }
+            else if (dtbl.Rows[0]["Gender"].ToString() == "female")
+            {
+
+                fRadioButton.Checked = true;
+            }
+            else
+            {
+                oRadioButton.Checked = true;
+            }
+        }
+        protected void CheckboxUpdate(DataTable dtbl)
+        {
+
+            string s = dtbl.Rows[0]["Course"].ToString();
+            string[] subs = s.Split(',');
+            for (int i = 0; i < subs.Length; i++)
+            {
+                for (int j = 0; j < CheckBoxList1.Items.Count; j++)
+                {
+                    if (subs[i] == CheckBoxList1.Items[j].Text)
+                    {
+                        CheckBoxList1.Items[j].Selected = true;
+                    }
+                }
+            }
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
@@ -168,6 +223,11 @@ namespace WebApplication1
             Clear();
             FillGridView();
             lblSuccessMessage.Text = "Deleted Successfully";
+        }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

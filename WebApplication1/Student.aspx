@@ -68,21 +68,33 @@
         <div>
              <b><asp:Label ID="Label12" runat="server" Text="Blood Group: " Width="200px" ></asp:Label></b>
                 <asp:TextBox ID="TxtBloodGrp" runat="server" Width="160px"></asp:TextBox>
-           </div>
+         </div>
          <br />
          <div>
-             <b><asp:Label ID="Label13" runat="server" Text="Gender: " Width="200px" ></asp:Label></b>
-              <fieldset style ="width:300px">
-        <asp:RadioButton ID="mRadioButton" runat="server" Text="male" GroupName="gender group" /> 
-        <asp:RadioButton ID="fRadioButton" runat="server" Text="female" GroupName="gender group" />
-        <asp:RadioButton ID="uRadioButton" runat="server" Text="unknown" GroupName="gender group" />
-         </fieldset>
-            <asp:Button ID="Button2" runat="server" Height="21px"  Text="Button" Width="56px" />
-        </div>
-            <br />
-         <div>
-             <b><asp:Label ID="Label14" runat="server" Text="Course: " Width="200px" ></asp:Label></b>
-             <fieldset style ="width:500px">
+             <b><asp:Label ID="Label13" runat="server" Text="Gender: " Width="200px"></asp:Label></b>
+                <fieldset style="width: 500px">
+                    <asp:RadioButton ID="mRadioButton" runat="server" Text="male" GroupName="gender group" AutoPostBack="True" />
+                    <asp:RadioButton ID="fRadioButton" runat="server" Text="female" GroupName="gender group" AutoPostBack="True" />
+                    <asp:RadioButton ID="oRadioButton" runat="server" Text="others" GroupName="gender group" AutoPostBack="True" />
+                </fieldset>
+                 <asp:Button ID="Button2" runat="server" Height="21px" Text="Button" Width="56px" />
+         </div>
+         <br />
+         <div >
+             <b><asp:Label ID="Label14" runat="server" Text="Course: " Width="200px"></asp:Label></b>
+             <fieldset style="width: 500px" >
+                 <asp:CheckBoxList ID="CheckBoxList1" runat="server">
+                     <asp:ListItem>C#</asp:ListItem>
+                     <asp:ListItem>Java</asp:ListItem>
+                     <asp:ListItem>C++</asp:ListItem>
+                     <asp:ListItem>PHP</asp:ListItem>
+                     <asp:ListItem>JavaScript</asp:ListItem>
+                     <asp:ListItem>Python</asp:ListItem>
+                     <asp:ListItem>SqlServer</asp:ListItem>
+
+                 </asp:CheckBoxList>
+             </fieldset>
+             <!--<fieldset style="width:500px">
             <asp:CheckBox ID="CheckBox1" runat="server" Text="C#" />
             <asp:CheckBox ID="CheckBox2" runat="server"  Text="Java" />
             <asp:CheckBox ID="CheckBox3" runat="server"  Text="C++" />
@@ -90,10 +102,11 @@
             <asp:CheckBox ID="CheckBox5" runat="server"  Text="JavaScript" />
             <asp:CheckBox ID="CheckBox6" runat="server" Text="Python" />
             <asp:CheckBox ID="CheckBox7" runat="server"  Text="SqlServer" />
-             </fieldset>
-            <asp:Button ID="Button3" runat="server"  Text="Button" />
-          </div>
-            <br />
+                
+             </fieldset>-->
+             <asp:Button ID="Button3" runat="server" Text="Button" />
+         </div>
+         <br />
            
         <div>
              <b><asp:Label ID="Label15" runat="server" Text="Photo: " Width="200px" ></asp:Label>
