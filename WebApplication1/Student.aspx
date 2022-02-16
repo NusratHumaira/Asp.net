@@ -9,7 +9,11 @@
 <body>
     <form id="form1" runat="server">
         <asp:HiddenField ID="hfStudentID" runat="server" />
-      
+         <div>
+              <asp:TextBox ID="TxtSearch" runat="server" style="margin-top: 13px"  Width="200px"></asp:TextBox>
+               <asp:Button ID="BtnSearch" runat="server" Text="Search" OnClick="Search" />
+        </div>
+        
         <div>
              <b><asp:Label ID="Label1" runat="server" Text="Student Id: " Width="200px" ></asp:Label></b>
              <asp:TextBox ID="TxtStudentID" runat="server" style="margin-top: 13px"  Width="158px"></asp:TextBox>
@@ -66,9 +70,21 @@
         </div>
             <br />
         <div>
-             <b><asp:Label ID="Label12" runat="server" Text="Blood Group: " Width="200px" ></asp:Label></b>
-                <asp:TextBox ID="TxtBloodGrp" runat="server" Width="160px"></asp:TextBox>
+            <b><asp:Label ID="Label12" runat="server" Text="Blood Group: " Width="200px"></asp:Label></b>
+            <asp:DropDownList ID="DropDownList1" runat="server" Width="160px">
+                <asp:ListItem>A+</asp:ListItem>
+                <asp:ListItem>A-</asp:ListItem>
+                <asp:ListItem>B+</asp:ListItem>
+                <asp:ListItem>B-</asp:ListItem>
+                <asp:ListItem>O+</asp:ListItem>
+                <asp:ListItem>O-</asp:ListItem>
+                <asp:ListItem>AB+</asp:ListItem>
+                <asp:ListItem>AB-</asp:ListItem>
+            </asp:DropDownList>
+                
          </div>
+
+        
          <br />
          <div>
              <b><asp:Label ID="Label13" runat="server" Text="Gender: " Width="200px"></asp:Label></b>

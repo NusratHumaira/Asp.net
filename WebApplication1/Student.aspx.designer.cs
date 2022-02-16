@@ -33,6 +33,24 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.HiddenField hfStudentID;
 
         /// <summary>
+        /// TxtSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtSearch;
+
+        /// <summary>
+        /// BtnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnSearch;
+
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -240,13 +258,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
-        /// TxtBloodGrp control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBloodGrp;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
         /// Label13 control.
@@ -276,13 +294,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.RadioButton fRadioButton;
 
         /// <summary>
-        /// uRadioButton control.
+        /// oRadioButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton uRadioButton;
+        protected global::System.Web.UI.WebControls.RadioButton oRadioButton;
 
         /// <summary>
         /// Button2 control.
@@ -301,6 +319,15 @@ namespace WebApplication1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label14;
+
+        /// <summary>
+        /// CheckBoxList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
 
         /// <summary>
         /// CheckBox1 control.

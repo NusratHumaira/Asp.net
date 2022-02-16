@@ -17,8 +17,9 @@ namespace WebApplication1
             if (!IsPostBack)
             {
                 btnDelete.Enabled = false;
+                Clear();
                 FillGridView();
-
+                
 
             }
         }
@@ -33,7 +34,7 @@ namespace WebApplication1
             hfStudentID.Value = "";
             TxtStudentID.Text = TxtName.Text = TxtFName.Text = TxtMName.Text = TxtDepartment.Text = "";
             TxtSubject.Text = TxtTotalSemester.Text = TxtMobileNo.Text = TxtEmail.Text = TxtDOB.Text = "";
-            TxtAddress.Text = TxtBloodGrp.Text = "";
+            TxtAddress.Text = "";
             lblSuccessMessage.Text = lblErrorMessage.Text = "";
             btnSave.Text = "Save";
             btnDelete.Enabled = false;
@@ -54,37 +55,7 @@ namespace WebApplication1
             {
                 gender = "others";
             }
-            /*string relocate = string.Empty;
-            
-            if (CheckBox1.Checked)
-            {
-                relocate = "C#";
-            }
-            else if (CheckBox2.Checked)
-            {
-                relocate = "Java";
-            }
-            else if (CheckBox3.Checked)
-            {
-                relocate = "C++";
-            }
-            else if (CheckBox4.Checked)
-            {
-                relocate = "PHP";
-            }
-            else if (CheckBox5.Checked)
-            {
-                relocate = "JavaScript";
-            }
-            else if (CheckBox6.Checked)
-            {
-                relocate = "Python";
-            }
-            else
-            {
-                relocate = "SqlServer";
-            }
-            */
+           
 
             if (sqlCon.State == ConnectionState.Closed)
                 sqlCon.Open();
@@ -102,7 +73,7 @@ namespace WebApplication1
             sqlCmd.Parameters.AddWithValue("@Email", TxtEmail.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@DOB", TxtDOB.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Address", TxtAddress.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@BloodGrp", TxtBloodGrp.Text.Trim());
+            sqlCmd.Parameters.AddWithValue("@BloodGrp", DropDownList1.SelectedValue);
             //sqlCmd.Parameters.AddWithValue("@Gender", RadioButtonList1.SelectedItem.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Gender", gender);
 
@@ -169,7 +140,7 @@ namespace WebApplication1
             TxtEmail.Text = dtbl.Rows[0]["Email"].ToString();
             TxtDOB.Text = dtbl.Rows[0]["DOB"].ToString();
             TxtAddress.Text = dtbl.Rows[0]["Address"].ToString();
-            TxtBloodGrp.Text = dtbl.Rows[0]["BloodGrp"].ToString();
+            DropDownList1.SelectedValue = dtbl.Rows[0]["BloodGrp"].ToString();
 
             RadioButtonUpdate(dtbl);
             CheckboxUpdate(dtbl);
@@ -177,27 +148,74 @@ namespace WebApplication1
             btnDelete.Enabled = true;
 
         }
+        protected void Search(object sender, EventArgs e)
+        {
+            this.SearchData();
+        }
+        protected void SearchData()
+        {
+            using (sqlCon)
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = @"SELECT ID,StudentID,Name,FName,MName,Department,Subject,TotalSemester,MobileNo,Email,DOB,Address,BloodGrp,Gender,Course FROM Student WHERE StudentID LIKE '%' + @StudentID + '%'";
+                cmd.Connection = sqlCon;
+                sqlCon.Open();
+                cmd.Parameters.AddWithValue("@StudentID", TxtSearch.Text.Trim());
+                SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                sqlCon.Close();
+                hfStudentID.Value = dtbl.Rows[0]["ID"].ToString();
+                TxtStudentID.Text = dtbl.Rows[0]["StudentID"].ToString();
+                TxtName.Text = dtbl.Rows[0]["Name"].ToString();
+                TxtFName.Text = dtbl.Rows[0]["FName"].ToString();
+                TxtMName.Text = dtbl.Rows[0]["MName"].ToString();
+                TxtDepartment.Text = dtbl.Rows[0]["Department"].ToString();
+                TxtSubject.Text = dtbl.Rows[0]["Subject"].ToString();
+                TxtTotalSemester.Text = dtbl.Rows[0]["TotalSemester"].ToString();
+                TxtMobileNo.Text = dtbl.Rows[0]["MobileNo"].ToString();
+                TxtEmail.Text = dtbl.Rows[0]["Email"].ToString();
+                TxtDOB.Text = dtbl.Rows[0]["DOB"].ToString();
+                TxtAddress.Text = dtbl.Rows[0]["Address"].ToString();
+                DropDownList1.SelectedValue = dtbl.Rows[0]["BloodGrp"].ToString();
+
+                RadioButtonUpdate(dtbl);
+                CheckboxUpdate(dtbl);
+                btnSave.Text = "Update";
+                btnDelete.Enabled = true;
+                    
+                
+            }
+
+
+        }
         protected void RadioButtonUpdate(DataTable dtbl)
         {
-            if (dtbl.Rows[0]["Gender"].ToString() == "male")
+
+            mRadioButton.Checked = false;
+            fRadioButton.Checked = false;
+            oRadioButton.Checked = false;
+
+            //if (dtbl.Rows[0]["Gender"].ToString() == "male")
+            //fRadioButton.Text == dtbl.Rows[0]["Gender"].ToString()
+            if (mRadioButton.Text == dtbl.Rows[0]["Gender"].ToString())
             {
                 //CheckBox1.Checked= true;
                 mRadioButton.Checked = true;
 
             }
-            else if (dtbl.Rows[0]["Gender"].ToString() == "female")
+            if (fRadioButton.Text == dtbl.Rows[0]["Gender"].ToString())
             {
 
                 fRadioButton.Checked = true;
             }
-            else
+            if (oRadioButton.Text == dtbl.Rows[0]["Gender"].ToString())
             {
                 oRadioButton.Checked = true;
             }
         }
         protected void CheckboxUpdate(DataTable dtbl)
         {
-
             string s = dtbl.Rows[0]["Course"].ToString();
             string[] subs = s.Split(',');
             for (int i = 0; i < subs.Length; i++)
@@ -229,5 +247,7 @@ namespace WebApplication1
         {
 
         }
+
+        
     }
 }
