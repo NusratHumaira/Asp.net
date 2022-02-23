@@ -51,13 +51,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.Button BtnSearch;
 
         /// <summary>
-        /// Label1 control.
+        /// studentIDLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label studentIDLabel;
 
         /// <summary>
         /// TxtStudentID control.
@@ -69,13 +69,22 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtStudentID;
 
         /// <summary>
-        /// Label2 control.
+        /// ValidationId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label ValidationId;
+
+        /// <summary>
+        /// NameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NameLabel;
 
         /// <summary>
         /// TxtName control.
@@ -87,13 +96,22 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtName;
 
         /// <summary>
-        /// Label3 control.
+        /// ValidationName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label ValidationName;
+
+        /// <summary>
+        /// FNameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label FNameLabel;
 
         /// <summary>
         /// TxtFName control.
@@ -105,13 +123,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtFName;
 
         /// <summary>
-        /// Label4 control.
+        /// MNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label MNameLabel;
 
         /// <summary>
         /// TxtMName control.
@@ -123,13 +141,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtMName;
 
         /// <summary>
-        /// Label5 control.
+        /// DepartmentLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label DepartmentLabel;
 
         /// <summary>
         /// TxtDepartment control.
@@ -141,13 +159,22 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtDepartment;
 
         /// <summary>
-        /// Label6 control.
+        /// ValidationDepartment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label ValidationDepartment;
+
+        /// <summary>
+        /// SubjectLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SubjectLabel;
 
         /// <summary>
         /// TxtSubject control.
@@ -159,13 +186,22 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtSubject;
 
         /// <summary>
-        /// Label7 control.
+        /// ValidationSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label ValidationSubject;
+
+        /// <summary>
+        /// TotalSemesterLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TotalSemesterLabel;
 
         /// <summary>
         /// TxtTotalSemester control.
@@ -177,13 +213,22 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtTotalSemester;
 
         /// <summary>
-        /// Label8 control.
+        /// ValidationTotalSemester control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label ValidationTotalSemester;
+
+        /// <summary>
+        /// MobileNoLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MobileNoLabel;
 
         /// <summary>
         /// TxtMobileNo control.
@@ -195,13 +240,22 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtMobileNo;
 
         /// <summary>
-        /// Label9 control.
+        /// ValidationMobileNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label ValidationMobileNo;
+
+        /// <summary>
+        /// EmailLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EmailLabel;
 
         /// <summary>
         /// TxtEmail control.
@@ -213,13 +267,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
-        /// Label10 control.
+        /// DOBLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label DOBLabel;
 
         /// <summary>
         /// TxtDOB control.
@@ -231,13 +285,22 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtDOB;
 
         /// <summary>
-        /// Label11 control.
+        /// ValidationDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.Label ValidationDOB;
+
+        /// <summary>
+        /// AddressLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AddressLabel;
 
         /// <summary>
         /// TxtAddress control.
@@ -249,13 +312,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox TxtAddress;
 
         /// <summary>
-        /// Label12 control.
+        /// BloodGrpLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label BloodGrpLabel;
 
         /// <summary>
         /// DropDownList1 control.
@@ -267,13 +330,22 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
-        /// Label13 control.
+        /// Validationbloodgrp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label Validationbloodgrp;
+
+        /// <summary>
+        /// GenderLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GenderLabel;
 
         /// <summary>
         /// mRadioButton control.
@@ -303,13 +375,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.RadioButton oRadioButton;
 
         /// <summary>
-        /// Button2 control.
+        /// ValidationGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Label ValidationGender;
 
         /// <summary>
         /// Label14 control.
@@ -330,76 +402,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
 
         /// <summary>
-        /// CheckBox1 control.
+        /// ValidationCourse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
-
-        /// <summary>
-        /// CheckBox2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
-
-        /// <summary>
-        /// CheckBox3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
-
-        /// <summary>
-        /// CheckBox4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox4;
-
-        /// <summary>
-        /// CheckBox5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox5;
-
-        /// <summary>
-        /// CheckBox6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox6;
-
-        /// <summary>
-        /// CheckBox7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox7;
-
-        /// <summary>
-        /// Button3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Label ValidationCourse;
 
         /// <summary>
         /// Label15 control.
@@ -411,13 +420,31 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
-        /// TxtPhoto control.
+        /// imgUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton TxtPhoto;
+        protected global::System.Web.UI.WebControls.FileUpload imgUpload;
+
+        /// <summary>
+        /// DataListimg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList DataListimg;
+
+        /// <summary>
+        /// ValidationImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ValidationImage;
 
         /// <summary>
         /// lblSuccessMessage control.
