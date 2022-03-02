@@ -130,6 +130,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="InsertUpdateDelete.aspx" />
     <Content Include="ProductNames.xml" />
+    <Content Include="PurchaseProject.aspx" />
     <Content Include="Student.aspx" />
     <Content Include="TextboxResponse.aspx" />
     <Content Include="TextboxValueIncrement.aspx" />
@@ -237,6 +238,13 @@
       <DependentUpon>InsertUpdateDelete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseProject.aspx.cs">
+      <DependentUpon>PurchaseProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseProject.aspx.designer.cs">
+      <DependentUpon>PurchaseProject.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
